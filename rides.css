@@ -29,7 +29,7 @@ ul{
     display:block;
     
 }
-i{
+.rides-list i{
     color:rgb(0, 0, 0);
     margin-right:10px;
 }
