@@ -1,0 +1,68 @@
+#rides-list{
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    color:rgb(63, 63, 63)
+}
+#rides-list h2{
+    text-align:left;
+    margin-left: 20px;
+    font-size: 20px;
+}
+ul{
+    list-style-type: none;
+    padding:0;
+}
+.ride{
+    display:flex;
+    flex-direction:row;
+    align-items: top;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom:20px;
+    margin:20px;
+}
+.ride-info{
+    display:block;
+    
+}
+i{
+    color:rgb(0, 0, 0);
+    margin-right:10px;
+}
+button{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    border:none;
+    border-radius:20px;
+    height:40px;
+    width: 150px;
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+}
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border:1px solid rgb(0, 0, 0);
+}
+.section-header{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:left;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.section-header input{
+    padding:10px;
+    border-radius:20px;
+    border:1px solid rgb(0, 0, 0);
+    width: 300px;
+    margin-left: 40px;
+}
+.section-header i{
+    margin-left:10px;
+}

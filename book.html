@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Book A Ride</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="book.css"/>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div class="book-ride">
+            <div class="booking-info">
+            <form class="booking-form">
+                <h1>Request For A Ride</h1>
+                <p>Enter pickup location and drop location,<br/>and select a ride type.</p>
+                <input type="text" id="pickup" name="pickup" required placeholder="Enter pickup location"/>
+                <input type="text" id="dropoff" name="dropoff" required placeholder="Enter drop-off location"/>
+                <select id="ride-type" name="ride-type" required>
+                    <option value="">Select a ride type</option>
+                    <option value="car">Car</option>
+                    <option value="bike">Bike</option>
+                    <option value="auto">Auto</option>
+                </select>
+                <button type="submit">Book Now</button>
+            </form>
+            </div>
+            <div id="map"></div>
+        </div>
+        <div id="footer"></div>
+        <script>
+            fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("navbar").innerHTML = data;});
+            fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("footer").innerHTML = data;});
+            var map = L.map('map').setView([13.0827, 80.2707], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
+        </script>
+    </body>
+</html>

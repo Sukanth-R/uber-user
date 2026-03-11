@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Ride Status</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="status.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div class="map-container">
+        <div id="map"></div>
+        <div class="status">
+        <div class="ride-status">
+            <h1><i class="fa-solid fa-car"></i>Driver is on the way</h1>
+            <p>Estimated time 19 minutes</p>
+            <p>Pickup:T Nager Drop:Anna Nagar</p>
+            <button class="cancel-ride">Cancel Ride</button>
+        </div>
+            
+        </div>
+        </div>
+        <div id="footer"></div>
+        <script>
+            fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("navbar").innerHTML = data;});
+            fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("footer").innerHTML = data;});
+            var map = L.map('map').setView([13.0827, 80.2707], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
+        </script>
+    </body>
+</html>

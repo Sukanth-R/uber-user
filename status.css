@@ -1,0 +1,46 @@
+.map-container{
+    position:relative;
+    width:100%;
+}
+#map{
+    height: 650px;
+    width:100%;
+}
+.status{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    position:absolute;
+    bottom: 10px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    z-index:1900;
+}
+.driver-details{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.cancel-ride{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    border:none;
+    border-radius:20px;
+    height:40px;
+    width: 150px;
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    margin-top:20px;
+}
+i{
+    color:rgb(0, 0, 0);
+    margin-right:10px;
+}
