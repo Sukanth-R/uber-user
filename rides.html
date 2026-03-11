@@ -17,7 +17,15 @@
                  
                  <input type="text" id="search" placeholder="Search by pickup or drop location..."/>
                  <i class="fa-solid fa-magnifying-glass"></i>
-                 <i class="fa-solid fa-filter"></i>
+                 <div class="filter">
+                    <i class="fa-solid fa-filter"></i>
+                    <div class="filter-menu">
+                        <p>Filter by Status:</p>
+                        <button class="filter-option" data-status="completed">Completed</button>
+                        <button class="filter-option" data-status="cancelled">Cancelled</button>
+                        <button class="filter-option" data-status="ongoing">Ongoing</button>
+                    </div>
+                 </div>
                 </div>
                 <ul>
                     <li>
