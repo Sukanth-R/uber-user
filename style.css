@@ -28,6 +28,7 @@ body{
     gap:20px;
     list-style:none;
     font-family:'Inter', sans-serif;
+    padding:0;
 }
 .main-header nav a{
     text-decoration: none;
